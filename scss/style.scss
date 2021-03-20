@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    height: 100vh;
+    .box-1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 120vh;
+        .con {
+            height: 75vh;
+            width: 80%;
+            .logo {
+                margin-bottom: 50px;
+            }
+            .content {
+                margin-bottom: 30px;
+                p:nth-child(1) {
+                    color: #0d7268;
+                    font-size: 23px;
+                    line-height: 30px;
+                    font-weight: 600;
+                }
+                p:nth-child(2) {
+                    color: #0d7268;
+                    font-size: 23px;
+                    line-height: 30px;
+                    font-weight: 500;
+                }
+            }
+            .download {
+                display: flex;
+                width: 100%;
+                margin-bottom: 100px;
+                .qrcode {
+                    width: 114px;
+                    height: 114px;
+                    margin-right: 20px;
+                }
+                .but {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    height: 114px;
+                    margin: 0;
+                    a {
+                        margin: 0;
+                        height: 51px;
+                        img {
+                            &:hover {
+                                filter: brightness(0.5);
+                            }
+                        }
+                    }
+                }
+            }
+            .sci {
+                margin: 0;
+                width: 100%;
+                display: flex;
+                a {
+                    img {
+                        margin: 0;
+                        margin-right: 10px;
+                        height: 35px;
+                        width: 35px;
+                        &:hover {
+                            filter: brightness(0.5);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .box-2 {
+        background: url(../img/zoomrad_composition_fixed.png) center (center/cover) no-repeat;
+    }
+}
+
+@media(max-width: 992px) {
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+        .box-1 {
+            height: 95vh;
+            .con {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                .logo {
+                    width: 162.8px;
+                    height: 35.3833px;
+                    margin-bottom: 10px;
+                }
+                .content {
+                    p:nth-child(1) {
+                        text-align: center;
+                        font-size: 23px;
+                    }
+                    p:nth-child(2) {
+                        text-align: center;
+                        font-size: 23px;
+                    }
+                }
+                .download {
+                    justify-content: center;
+                    margin-bottom: 50px;
+                }
+                .sci {
+                    justify-content: center;
+                }
+            }
+        }
+        .box-2 {
+            height: 65vh;
+            width: 100%;
+            background-position: 0 0;
+        }
+    }
+}
